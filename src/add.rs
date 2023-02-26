@@ -8,8 +8,7 @@ pub struct AddOptions {
     file: String,
 }
 
-pub fn add(args: &AddOptions) -> Result<()> {
-    let folder = "./files/";
+pub fn add(folder: &str, args: &AddOptions) -> Result<()> {
     let path = folder.to_string() + &args.file;
     File::create(path).expect("failed to create file");
     Ok(())
