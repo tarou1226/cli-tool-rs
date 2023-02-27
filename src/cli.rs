@@ -1,5 +1,6 @@
 use crate::add::AddOptions;
 use crate::list::ListOptions;
+use crate::remove::RemoveOptions;
 use structopt::StructOpt;
 
 #[derive(StructOpt)]
@@ -14,8 +15,9 @@ pub enum Command {
     Add(AddOptions),
     #[structopt(about = "show all files", name = "list")]
     List(ListOptions),
+    #[structopt(about = "remove a file", name = "remove")]
+    Remove(RemoveOptions),
     /*
-    Remove(),
     Rename(),
     */
 }
