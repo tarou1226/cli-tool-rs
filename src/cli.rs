@@ -1,6 +1,7 @@
 use crate::add::AddOptions;
 use crate::list::ListOptions;
 use crate::remove::RemoveOptions;
+use crate::rename::RenameOptions;
 use structopt::StructOpt;
 
 #[derive(StructOpt)]
@@ -17,7 +18,6 @@ pub enum Command {
     List(ListOptions),
     #[structopt(about = "remove a file", name = "remove")]
     Remove(RemoveOptions),
-    /*
-    Rename(),
-    */
+    #[structopt(about = "rename from before to after", name = "rename")]
+    Rename(RenameOptions),
 }
